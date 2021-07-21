@@ -11,8 +11,3 @@ provider "google" {
   project = "genies-infrastructure"
   region  = "us-west1"
 }
-
-resource "google_service_account" "test_service_account" {
-  account_id   = "gha-test-sa"
-  display_name = "GHA Test SA"
-}
