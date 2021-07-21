@@ -15,10 +15,10 @@ jobs:
       - name: Terraform Init
         run: terraform init
       - name: Terraform Plan
-        env:
+        with:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         run: terraform plan
       - name: Terraform Apply
-        env:
+        with:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         run: terraform apply --auto-approve
